@@ -33,7 +33,7 @@ export default function Home() {
   ];
 
   return (
-    <main className={`bg-black text-white flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}>
+    <main className={` flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}>
       <div className="max-w-lg mx-auto mt-10">
         <Accordion items={accordionItems} />
       </div>

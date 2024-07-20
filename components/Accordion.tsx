@@ -24,7 +24,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
       {items.map((item, index) => (
         <div
           key={index}
-          className={`border-b-2 border-dashed border-${item.color}-500 rounded-sm pb-2`}
+          className="border-b-2  rounded-sm pb-2"
         >
           <div className="flex justify-between items-center w-full rounded-md px-4 py-2 text-left">
             <span>{item.title}</span>
@@ -38,7 +38,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
           <div
             className={`rounded-xl overflow-hidden  transition-all duration-300  ${activeIndex === index ? 'max-h-40 ease-in' : 'max-h-0 ease-out opacity-0'}`}
           >
-            <div className={`m-2 bg-${item.color}-500 p-4 pt-2 rounded-xl`}>{item.content}</div>
+            <div className=" p-4 pt-2 rounded-xl">{item.content}</div>
           </div>
         </div>
       ))}
@@ -47,18 +47,3 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
 };
 
 export default Accordion;
-
-const bgGreen100 = 'bg-green-500';
-const bgBlue100 = 'bg-blue-500';
-const bgIndigo100 = 'bg-indigo-500';
-const bgYellow100 = 'bg-yellow-500';
-const bgRed100 = 'bg-red-500';
-const bgPurple100 = 'bg-purple-500';
-
-const borderGreen300 = 'border-green-500';
-const borderBlue300 = 'border-blue-500';
-const borderIndigo300 = 'border-indigo-500';
-const borderYellow300 = 'border-yellow-500';
-const borderRed300 = 'border-red-500';
-const borderPurple300 = 'border-purple-500';
-4;
