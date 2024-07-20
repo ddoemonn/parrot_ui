@@ -9,6 +9,8 @@ export default function AlertDialogExample() {
         message="Are you sure you want to proceed with this action? This change cannot be undone, and it may affect your data or settings."
         cancelLabel="No, Cancel"
         confirmLabel="Yes, Confirm"
+        onCancel={() => alert('Action canceled!')}
+        onConfirm={() => alert('Action confirmed!')}
       />
     </div>
   );

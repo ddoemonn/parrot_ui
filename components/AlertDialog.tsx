@@ -8,15 +8,28 @@ interface AlertDialogProps {
   cancelLabel?: string;
   confirmLabel?: string;
   triggerButtonLabel: string;
+  onConfirm: () => void;
+  onCancel: () => void;
 }
 
-const AlertDialog: React.FC<AlertDialogProps> = ({ title, message, cancelLabel = 'Cancel', confirmLabel = 'Confirm', triggerButtonLabel }) => {
+const AlertDialog: React.FC<AlertDialogProps> = ({
+  title,
+  message,
+  cancelLabel = 'Cancel',
+  confirmLabel = 'Confirm',
+  triggerButtonLabel,
+  onCancel,
+  onConfirm,
+}) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleOpenDialog = () => setIsDialogOpen(true);
-  const handleCloseDialog = () => setIsDialogOpen(false);
+  const handleCancel = () => {
+    onCancel();
+    setIsDialogOpen(false);
+  };
   const handleConfirm = () => {
-    console.log('Confirmed!');
+    onConfirm();
     setIsDialogOpen(false);
   };
 
@@ -34,7 +47,7 @@ const AlertDialog: React.FC<AlertDialogProps> = ({ title, message, cancelLabel =
             <div className="flex justify-end gap-4">
               <Button
                 label={cancelLabel}
-                onClick={handleCloseDialog}
+                onClick={handleCancel}
                 variant="secondary"
               />
               <Button
