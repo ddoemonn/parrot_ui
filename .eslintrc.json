@@ -1,3 +1,83 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "plugins": ["prettier", "@typescript-eslint"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "import/no-anonymous-default-export": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/display-name": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/self-closing-comp": "error",
+    "prettier/prettier": "error",
+    "object-shorthand":"error",
+    "react/jsx-curly-brace-presence": [
+      "error",
+      {
+        "props": "never",
+        "children": "never"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "after"
+          },
+          {
+            "pattern":"next/*",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "groups": [
+          "builtin",
+          "external",
+          "type",
+          "object",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "pathGroupsExcludedImportTypes": ["react", "next"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc" 
+        }
+      }
+    ]
+  },
+  /*
+   * Projede kullanılan glbal namespace'ler. Eğer burada belirtilmezse eslint global namespace'leri ayırt edemez ve undef hatası verir.
+   * @see - https://eslint.org/docs/latest/user-guide/configuring/language-options#specifying-globals
+   */
+  "globals": {
+    "JSX": "readonly",
+    "React": "readonly"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@next/next/no-img-element": "off",
+        "@typescript-eslint/no-floating-promises": "off"
+      }
+    }
+  ]
 }
