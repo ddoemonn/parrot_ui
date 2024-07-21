@@ -1,13 +1,13 @@
 import { Inter } from 'next/font/google';
 
-import CarouselExample from '@/examples/Carousel';
+import CollapseExample from '@/examples/Collapse';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
     <main className={` flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}>
-      <CarouselExample />
+      <CollapseExample />
     </main>
   );
 }

@@ -31,7 +31,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
         </button>
       </div>
 
-      <div className={`rounded-xl flex transition-transform transform duration-500 ease-in-out w-full ${transformClasses}`}>
+      <div className={`rounded-xl flex transition-transform transform duration-700 ease-in-out w-full ${transformClasses}`}>
         {children.map((child, index) => (
           <div
             key={index}
