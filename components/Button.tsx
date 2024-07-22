@@ -8,7 +8,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ label, onClick, variant = 'primary', disabled = false }) => {
-  const baseClasses = 'px-4 py-2 rounded-lg focus:outline-none transition-colors duration-300';
+  const baseClasses = 'px-4 py-2 rounded-lg focus:outline-none transition-colors duration-300 focus:ring-2 focus:ring-black';
 
   // Define the variant styles in an object
   const variantStyles: Record<string, string> = {
