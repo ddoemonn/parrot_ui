@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* src/styles/globals.css */
+
+.keyword {
+    color: #ff79c6; /* Example color for keywords */
+  }
+  
+  .string {
+    color: #f1fa8c; /* Example color for strings */
+  }
+  
+  .comment {
+    color: #6272a4; /* Example color for comments */
+  }
+  
+  .number {
+    color: #bd93f9; /* Example color for numbers */
+  }
+  

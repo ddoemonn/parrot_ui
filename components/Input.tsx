@@ -1,15 +1,16 @@
 import React from 'react';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   errorMessage?: string;
 }
 
-const Input: React.FC<InputProps> = ({ label, errorMessage, ...props }) => {
+const TextInput: React.FC<TextInputProps> = ({ label, errorMessage, ...props }) => {
   return (
     <div className="mb-4 max-w-xs">
       {label && <label className="block text-sm font-medium text-gray-700">{label}</label>}
       <input
+        type="text"
         className={`mt-1 block w-full px-3 py-2 border ${
           errorMessage ? 'border-red-500' : 'border-gray-300'
         } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
@@ -20,4 +21,4 @@ const Input: React.FC<InputProps> = ({ label, errorMessage, ...props }) => {
   );
 };
 
-export default Input;
+export default TextInput;
