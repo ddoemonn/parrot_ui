@@ -1,59 +1,52 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface NavItem {
-  label: string;
   href: string;
-  subItems?: NavItem[];
+  renderItem?: React.ReactNode;
 }
 
 interface NavMenuProps {
   items: NavItem[];
+  direction?: 'horizontal' | 'vertical';
 }
 
-const NavMenu: React.FC<NavMenuProps> = ({ items }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const handleToggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const renderNavItem = (item: NavItem, index: number) => (
-    <div
-      key={index}
-      className="relative "
-    >
-      <a
-        href={item.href}
-        className="block px-4 py-2 text-white hover:bg-gray-700 rounded-xl"
-        onClick={e => {
-          if (item.subItems) {
-            e.preventDefault();
-            handleToggle(index);
-          }
-        }}
-      >
-        {item.label}
-      </a>
-      {item.subItems && openIndex === index && (
-        <div className="absolute left-0 mt-2 bg-gray-800 text-white rounded-xl shadow-lg">
-          {item.subItems.map((subItem, subIndex) => (
-            <a
-              key={subIndex}
-              href={subItem.href}
-              className="block px-4 py-2 hover:bg-gray-600 rounded-xl"
-            >
-              {subItem.label}
-            </a>
-          ))}
-        </div>
+const NavMenu: React.FC<NavMenuProps> = ({ items, direction = 'vertical' }) => {
+  const renderVertical = (item: NavItem) => (
+    <>
+      {item.renderItem && (
+        <a
+          href={item.href}
+          className="block px-4 py-2 last:pr-0  first:flex-1 first:hover:no-underline first:pl-0"
+        >
+          {item.renderItem}
+        </a>
       )}
-    </div>
+    </>
+  );
+
+  const renderHorizontal = (item: NavItem) => (
+    <>
+      {item.renderItem && (
+        <>
+          <a
+            href={item.href}
+            className="block px-2 py-3 last:pr-0 last:flex-1 first:hover:no-underline first:pl-0"
+          >
+            {item.renderItem}
+          </a>
+        </>
+      )}
+    </>
   );
 
   return (
-    <nav className="bg-gray-800 rounded-xl">
-      <div className="container mx-auto flex space-x-4">{items.map((item, index) => renderNavItem(item, index))}</div>
-    </nav>
+    <>
+      {direction === 'vertical' ? (
+        <nav className="z-10 bg-white py-2 px-6 w-full flex items-center shadow-sm text-sm font-medium">{items.map(item => renderVertical(item))}</nav>
+      ) : (
+        <nav className="py-3 px-6 w-1/4 flex flex-col shadow-sm min-h-screen ">{items.map(item => renderHorizontal(item))}</nav>
+      )}
+    </>
   );
 };
 
