@@ -1,9 +1,14 @@
 import NavigationMenu from '@/components/NavigationMenu';
 import ScrollArea from '@/components/ScrollArea';
 
+import ComponentPage from './ComponentPage';
 import { navItems } from './navItems';
 
-export default function ComponentsPage({ children }: { children: React.ReactNode }) {
+interface ComponentsPageProps {
+  slug?: string;
+}
+
+export default function ComponentsPage({ slug }: ComponentsPageProps) {
   return (
     <div className="flex overflow-hidden">
       <ScrollArea className=" w-1/5 shadow-lg ">
@@ -12,7 +17,7 @@ export default function ComponentsPage({ children }: { children: React.ReactNode
           direction="horizontal"
         />
       </ScrollArea>
-      {children}
+      <ComponentPage slug={slug || 'Accordion'} />
     </div>
   );
 }

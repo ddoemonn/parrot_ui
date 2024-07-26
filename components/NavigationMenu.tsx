@@ -44,7 +44,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ items, direction = 'vertical' }) => {
       {direction === 'vertical' ? (
         <nav className="z-10 bg-white py-2 px-6 w-full flex items-center  shadow-sm text-sm font-medium">{items.map(item => renderVertical(item))}</nav>
       ) : (
-        <nav className="py-3 px-6 w-full flex flex-col shadow-sm max-h-svh ">{items.map(item => renderHorizontal(item))}</nav>
+        <nav className="py-3 px-6 w-full flex flex-col max-h-svh ">{items.map(item => renderHorizontal(item))}</nav>
       )}
     </>
   );

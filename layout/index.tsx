@@ -20,7 +20,7 @@ const navItems = [
     renderItem: <span className="text-blue-500 hover:underline decoration-blue-500 text-lg font-semibold">Examples</span>,
   },
   {
-    href: '/components',
+    href: '/components/accordion',
     renderItem: <span className="text-green-500 hover:underline decoration-green-500 text-lg font-semibold">Components</span>,
   },
   {
