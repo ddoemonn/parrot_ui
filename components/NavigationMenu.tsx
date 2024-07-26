@@ -30,7 +30,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ items, direction = 'vertical' }) => {
         <>
           <a
             href={item.href}
-            className="block px-2 py-3 last:pr-0 last:flex-1 first:hover:no-underline first:pl-0"
+            className="block px-2 py-3 last:pr-0 last:flex-1 first:hover:no-underline"
           >
             {item.renderItem}
           </a>
@@ -42,9 +42,9 @@ const NavMenu: React.FC<NavMenuProps> = ({ items, direction = 'vertical' }) => {
   return (
     <>
       {direction === 'vertical' ? (
-        <nav className="z-10 bg-white py-2 px-6 w-full flex items-center shadow-sm text-sm font-medium">{items.map(item => renderVertical(item))}</nav>
+        <nav className="z-10 bg-white py-2 px-6 w-full flex items-center  shadow-sm text-sm font-medium">{items.map(item => renderVertical(item))}</nav>
       ) : (
-        <nav className="py-3 px-6 w-1/4 flex flex-col shadow-sm min-h-screen ">{items.map(item => renderHorizontal(item))}</nav>
+        <nav className="py-3 px-6 w-full flex flex-col shadow-sm max-h-svh ">{items.map(item => renderHorizontal(item))}</nav>
       )}
     </>
   );

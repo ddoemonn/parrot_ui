@@ -3,11 +3,7 @@ import ScrollArea from '@/components/ScrollArea';
 const ScrollAreaExample: React.FC = () => {
   return (
     <div className="p-4">
-      <ScrollArea
-        width="w-80"
-        height="h-64"
-        className="border border-gray-300 rounded-md p-2"
-      >
+      <ScrollArea className="border border-gray-300 rounded-md p-2 w-80 h-64">
         <div className="space-y-4">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nulla eu suscipit cursus, libero nisl facilisis est, at faucibus orci

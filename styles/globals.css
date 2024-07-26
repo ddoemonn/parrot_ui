@@ -20,3 +20,32 @@
     color: #bd93f9; /* Example color for numbers */
   }
   
+
+
+* {
+  --sb-track-color: transparent;
+  --sb-thumb-color: linear-gradient(to bottom, rgb(255, 255, 126), rgb(135, 255, 135));
+  --sb-size: 5px;
+}
+
+*::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
