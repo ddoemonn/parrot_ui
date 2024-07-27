@@ -45,4 +45,5 @@ export const navItems = [
   { href: 'toast', renderItem: <span className="hover:underline">Toast</span> },
   { href: 'tooltip', renderItem: <span className="hover:underline">Tooltip</span> },
   { href: 'upload', renderItem: <span className="hover:underline">Upload</span> },
+  { href: 'tabs', renderItem: <span className="hover:underline">Tabs</span> },
 ];
