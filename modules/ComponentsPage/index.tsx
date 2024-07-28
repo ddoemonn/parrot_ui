@@ -10,8 +10,8 @@ interface ComponentsPageProps {
 
 export default function ComponentsPage({ slug }: ComponentsPageProps) {
   return (
-    <div className="flex overflow-hidden">
-      <ScrollArea className=" w-1/5 shadow-lg ">
+    <div className="flex overflow-hidden max-h-svh">
+      <ScrollArea className=" w-1/4 shadow-lg ">
         <NavigationMenu
           items={navItems}
           direction="horizontal"

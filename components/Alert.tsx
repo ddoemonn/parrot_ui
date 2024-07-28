@@ -6,6 +6,7 @@ interface AlertProps {
   title: string;
   icon: React.ReactElement;
   children: React.ReactNode;
+  className?: string;
 }
 
 const baseStyles = 'p-4 flex items-start';
@@ -27,12 +28,12 @@ const variantStyles = {
   },
 };
 
-const Alert: React.FC<AlertProps> = ({ variant = 'white', color = 'cyan', title, icon, children }) => {
+const Alert: React.FC<AlertProps> = ({ variant = 'white', color = 'cyan', title, icon, children, className }) => {
   const variantStyle = variant === 'filled' ? variantStyles.filled[color] : variantStyles.white;
   const colorStyle = variant === 'filled' ? '' : colorStyles[color];
 
   return (
-    <div className={`${baseStyles} ${variantStyle} ${variant === 'white' && 'border-l-4'} ${colorStyle}`}>
+    <div className={`${baseStyles} ${className}  ${variantStyle} ${variant === 'white' && 'border-l-4'} ${colorStyle}`}>
       <div className="mr-3 p-1">{icon}</div>
       <div>
         <h3 className="font-bold">{title}</h3>

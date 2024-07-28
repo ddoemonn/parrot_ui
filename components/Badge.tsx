@@ -9,7 +9,7 @@ interface BadgeProps {
 }
 
 const Badge: React.FC<BadgeProps> = ({ variant = 'light', color = 'blue', radius = 'md', children }) => {
-  const baseStyles = 'inline-block px-3 py-1 text-sm font-medium';
+  const baseStyles = 'inline-block px-3 py-1 text-sm font-medium max-h-10 flex items-center';
 
   const variantStyles = {
     light: `bg-${color}-100 text-${color}-800`,

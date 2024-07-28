@@ -17,11 +17,11 @@ const navItems = [
   },
   {
     href: '/examples',
-    renderItem: <span className="text-blue-500 hover:underline decoration-blue-500 text-lg font-semibold">Examples</span>,
+    renderItem: <span className="text-blue-500  hover:underline text-lg font-semibold">Examples</span>,
   },
   {
     href: '/components/accordion',
-    renderItem: <span className="text-green-500 hover:underline decoration-green-500 text-lg font-semibold">Components</span>,
+    renderItem: <span className="text-green-500 hover:underline text-lg font-semibold">Components</span>,
   },
   {
     href: 'https://www.github.com',
