@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 interface ComboboxProps {
   options: string[];
   onSelect: (option: string) => void;
+  placeholder?: string;
 }
 
-const Combobox: React.FC<ComboboxProps> = ({ options, onSelect }) => {
+const Combobox: React.FC<ComboboxProps> = ({ options, onSelect, placeholder }) => {
   const [inputValue, setInputValue] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,6 +23,7 @@ const Combobox: React.FC<ComboboxProps> = ({ options, onSelect }) => {
       <input
         type="text"
         value={inputValue}
+        placeholder={placeholder}
         onChange={e => setInputValue(e.target.value)}
         onFocus={() => setIsOpen(true)}
         onBlur={() => setTimeout(() => setIsOpen(false), 200)}
