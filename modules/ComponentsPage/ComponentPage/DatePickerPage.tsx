@@ -134,7 +134,7 @@ export default function DatePickerPage() {
           </div>
         </div>
       }
-      name="DatePicker"
+      name="Date Picker"
       detail="The DatePicker component allows users to select a date from a calendar view. It displays the selected date and supports month navigation."
     />
   );

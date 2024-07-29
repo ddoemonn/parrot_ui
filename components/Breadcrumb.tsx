@@ -15,6 +15,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const currentPath = window.location.pathname;
+      console.log(currentPath, items);
       setActiveTab(currentPath);
     }
   }, []);
