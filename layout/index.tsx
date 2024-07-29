@@ -24,6 +24,10 @@ const navItems = [
     renderItem: <span className="text-green-500 hover:underline text-lg font-semibold">Components</span>,
   },
   {
+    href: '/resources',
+    renderItem: <span className="text-indigo-500 hover:underline text-lg font-semibold">Resources</span>,
+  },
+  {
     href: 'https://www.github.com',
     renderItem: <GitHubLogoIcon className="w-6 h-6" />,
   },
@@ -31,7 +35,7 @@ const navItems = [
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <main className={` overflow-hidden max-h-screen  flex flex-col z-10  ${exo.className} `}>
+    <main className={`overflow-hidden max-h-svh flex flex-col z-10  ${exo.className} `}>
       <NavigationMenu
         items={navItems}
         direction="vertical"

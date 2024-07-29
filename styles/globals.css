@@ -24,12 +24,13 @@
 
 * {
   --sb-track-color: transparent;
-  --sb-thumb-color: linear-gradient(to bottom, rgb(255, 255, 126), rgb(135, 255, 135));
-  --sb-size: 5px;
+  --sb-thumb-color: #c7d2fe;
+  --sb-size: 3px;
 }
 
 *::-webkit-scrollbar {
   width: var(--sb-size);
+  height: var(--sb-size);
 }
 
 *::-webkit-scrollbar-track {
@@ -40,6 +41,7 @@
 *::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 3px;
+  background-clip: padding-box;
 }
 
 @supports not selector(::-webkit-scrollbar) {

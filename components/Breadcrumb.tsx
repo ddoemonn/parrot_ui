@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface BreadcrumbItem {
   label: string;
@@ -10,8 +10,19 @@ interface BreadcrumbProps {
 }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
+  const [activeTab, setActiveTab] = useState<string>('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname;
+      setActiveTab(currentPath);
+    }
+  }, []);
   return (
-    <nav aria-label="breadcrumb">
+    <nav
+      aria-label="breadcrumb"
+      className=" text-md"
+    >
       <ol className="flex flex-wrap list-none p-0 m-0">
         {items.map((item, index) => (
           <li
@@ -21,7 +32,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
             {item.href ? (
               <a
                 href={item.href}
-                className=" hover:underline"
+                className={`${activeTab === item.href ? 'text-indigo-500' : ''}`}
               >
                 {item.label}
               </a>

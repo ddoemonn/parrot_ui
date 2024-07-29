@@ -100,5 +100,5 @@ export default function ComponentPage({ slug }: ComponentsPageProps) {
   else if (slug === 'toast') return <ToastPage />;
   else if (slug === 'tooltip') return <TooltipPage />;
   else if (slug === 'upload') return <UploadPage />;
-  else return <div>Component not found</div>;
+  else return null;
 }

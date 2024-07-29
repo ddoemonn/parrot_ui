@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     <Layout>
-      <ComponentsPage slug={String(slug)} />;
+      <ComponentsPage slug={String(slug)} />
     </Layout>
   );
 }

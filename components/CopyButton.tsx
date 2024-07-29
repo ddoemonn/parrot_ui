@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 
+import { CopyIcon } from '@radix-ui/react-icons';
+
 interface CopyButtonProps {
   text: string;
 }
@@ -22,9 +24,9 @@ const CopyButton: React.FC<CopyButtonProps> = ({ text }) => {
   return (
     <button
       onClick={handleCopy}
-      className="flex items-center px-4 py-2 border rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="flex items-center px-2 py-2 border rounded-md shadow-sm text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
     >
-      {copied ? <span className="text-sm">Copied!</span> : <span className="text-sm">Copy</span>}
+      {copied ? <span className="text-xs">Copied!</span> : <CopyIcon className="w-3 h-3" />}
     </button>
   );
 };

@@ -33,7 +33,7 @@ const Alert: React.FC<AlertProps> = ({ variant = 'white', color = 'cyan', title,
   const colorStyle = variant === 'filled' ? '' : colorStyles[color];
 
   return (
-    <div className={`${baseStyles} ${className}  ${variantStyle} ${variant === 'white' && 'border-l-4'} ${colorStyle}`}>
+    <div className={`max-w-lg ${baseStyles} ${className}  ${variantStyle} ${variant === 'white' && 'border-l-4'} ${colorStyle}`}>
       <div className="mr-3 p-1">{icon}</div>
       <div>
         <h3 className="font-bold">{title}</h3>

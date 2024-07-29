@@ -27,7 +27,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
   };
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 text-md">
       {items.map((item, index) => (
         <div
           key={index}

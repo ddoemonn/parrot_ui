@@ -30,7 +30,7 @@ const ScrollArea: React.FC<ScrollAreaProps> = ({ children, className = '' }) => 
         scrollArea.removeEventListener('scroll', handleScroll);
       }
     };
-  });
+  }, []);
 
   return (
     <div
