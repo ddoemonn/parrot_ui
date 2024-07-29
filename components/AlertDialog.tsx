@@ -41,7 +41,7 @@ const AlertDialog: React.FC<AlertDialogProps> = ({
         variant="secondary"
       />
       {isDialogOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-xl mx-auto">
             <h1 className="text-xl mb-4">{title}</h1>
             <p className="text-md mb-4">{message}</p>

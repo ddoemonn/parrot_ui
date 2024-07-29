@@ -1,4 +1,3 @@
-// Calendar.tsx
 import React, { useState } from 'react';
 
 const generateDays = (year: number, month: number) => {

@@ -21,13 +21,11 @@ export default function ComponentDetail({ usage, code, component, detail, name }
     {
       label: 'Code',
       content: (
-        <ScrollArea>
-          <Code
-            code={code}
-            copyButton={true}
-            className="bg-indigo-50 text-indigo-900"
-          />
-        </ScrollArea>
+        <Code
+          code={code}
+          copyButton={true}
+          className="bg-indigo-50 text-indigo-900"
+        />
       ),
     },
     {

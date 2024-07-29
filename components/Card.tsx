@@ -5,11 +5,12 @@ interface CardProps {
   description: string;
   imageUrl: string;
   linkUrl: string;
+  className?: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, description, imageUrl, linkUrl }) => {
+const Card: React.FC<CardProps> = ({ title, description, imageUrl, linkUrl, className }) => {
   return (
-    <div className="max-w-sm rounded-xl overflow-hidden shadow-lg">
+    <div className={` rounded-xl overflow-hidden shadow-lg ${className}`}>
       <img
         className="w-full"
         src={imageUrl}
