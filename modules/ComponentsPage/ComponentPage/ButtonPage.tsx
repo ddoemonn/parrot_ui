@@ -80,26 +80,29 @@ export default function ButtonPage() {
       component={
         <div className="flex gap-10 justify-center mx-auto items-center">
           <Button
-            label="Primary Button"
             onClick={handleClick}
-            variant="primary"
-          />
+            className="bg-green-500 text-white"
+          >
+            Green Button
+          </Button>
           <Button
-            label="Secondary Button"
             onClick={handleClick}
-            variant="secondary"
-          />
+            className="bg-blue-500 text-white"
+          >
+            Blue Button
+          </Button>
           <Button
-            label="Disabled Button"
             onClick={handleClick}
-            variant="primary"
             disabled
-          />
+          >
+            Disabled Button
+          </Button>
           <Button
-            label="Destructive Button"
+            className="bg-red-500 text-white"
             onClick={handleClick}
-            variant="destructive"
-          />
+          >
+            Destructive Button
+          </Button>
         </div>
       }
       name="Button"
