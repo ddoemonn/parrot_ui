@@ -7,12 +7,11 @@ interface AvatarProps {
 }
 
 const Avatar: React.FC<AvatarProps> = ({ src, alt, radius = 'md', children, className }) => {
-  const baseClasses = 'flex items-center justify-center border border-gray-300';
   const radiusClasses =
     radius === 'full' ? 'rounded-full' : radius === 'sm' ? 'rounded-sm' : radius === 'md' ? 'rounded-md' : radius === 'lg' ? 'rounded-lg' : 'rounded-xl';
 
   return (
-    <div className={`${baseClasses} ${className} ${radiusClasses} w-16 h-16`}>
+    <div className={` ${className} ${radiusClasses} flex items-center justify-center border border-gray-300 w-16 h-16`}>
       {src ? (
         <img
           src={src}
@@ -24,7 +23,11 @@ const Avatar: React.FC<AvatarProps> = ({ src, alt, radius = 'md', children, clas
           {children ? (
             <span className="w-full h-full flex items-center justify-center">{children}</span>
           ) : (
-            <span className="text-2xl w-full text-center font-bold">?</span>
+            <img
+              src="/empty_avatar.png"
+              alt={alt}
+              className={` ${radiusClasses} w-full h-full object-cover`}
+            />
           )}
         </div>
       )}

@@ -1,4 +1,4 @@
-import { StarIcon } from '@radix-ui/react-icons';
+import { BellIcon, StarIcon } from '@radix-ui/react-icons';
 
 import Avatar from '@/components/Avatar';
 import ComponentDetail from '@/components/websiteComponents/ComponentDetail';
@@ -64,35 +64,47 @@ export default function AlertPage() {
       usage={avatarUsage}
       code={avatarCode}
       component={
-        <div className="flex justify-center gap-10 w-full">
-          <Avatar
-            src="https://img.freepik.com/premium-photo/3d-rendering-half-body-bearded-male-character-wearing-eyeglasses-red-flannel_477250-77.jpg?w=1380"
-            alt="it's me"
-            radius="xl"
-          />
-
-          <Avatar
-            radius="full"
-            className="bg-red-700"
-          />
-
-          <Avatar
-            className="bg-blue-500 text-xl"
-            radius="xl"
-          >
-            MK
-          </Avatar>
-
-          <Avatar
-            className="bg-indigo-500"
-            radius="full"
-          >
-            <StarIcon
-              color="blue"
-              width={35}
-              height={35}
+        <div className="flex justify-center gap-20 w-ful text-md">
+          <div className="flex flex-col items-center gap-3">
+            <h3>Image Avatar</h3>
+            <Avatar
+              src="https://img.freepik.com/premium-photo/3d-rendering-half-body-bearded-male-character-wearing-eyeglasses-red-flannel_477250-77.jpg?w=1380"
+              alt="it's me"
+              radius="full"
             />
-          </Avatar>
+          </div>
+
+          <div className="flex flex-col items-center gap-3">
+            <h3>Empty Avatar</h3>
+            <Avatar
+              radius="full"
+              className="p-2 "
+            />
+          </div>
+
+          <div className="flex flex-col items-center gap-3">
+            <h3>Text Avatar</h3>
+            <Avatar
+              className="bg-blue-700 text-xl"
+              radius="full"
+            >
+              MK
+            </Avatar>
+          </div>
+
+          <div className="flex flex-col items-center gap-3">
+            <h3>Icon Avatar</h3>
+            <Avatar
+              className="bg-black"
+              radius="full"
+            >
+              <BellIcon
+                color="white"
+                width={35}
+                height={35}
+              />
+            </Avatar>
+          </div>
         </div>
       }
       detail="An image element with a fallback for representing the user."

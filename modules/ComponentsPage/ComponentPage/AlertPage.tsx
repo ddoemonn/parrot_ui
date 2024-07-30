@@ -68,14 +68,12 @@ export default function AlertPage() {
       usage={alertUsage}
       code={alertCode}
       component={
-        <div className=" lg:max-w-3xl  ">
+        <div className="lg:max-w-3xl">
           <Alert
-            variant="white"
-            color="red"
-            title="Alert title"
+            title="Account Deletion Failed"
             icon={icon}
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At officiis, quae tempore necessitatibus placeat saepe.
+            There was an error while trying to delete your account. Please try again later or contact support if the issue persists.
           </Alert>
         </div>
       }

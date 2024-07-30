@@ -117,8 +117,8 @@ export default function AlertDialogPage() {
             <p className="text-md">Are you sure you want to delete your account? This action cannot be undone and you will lose all your data.</p>
 
             <AlertDialogFooter
-              buttonCancelClassName="bg-red-600 text-white"
-              buttonConfirmClassName="bg-blue-600 text-white"
+              buttonCancelClassName="bg-red-600 text-white text-sm !p-2"
+              buttonConfirmClassName="bg-blue-600 text-white text-sm !p-2"
               onCancel={handleCancel}
               onConfirm={handleConfirm}
             />
