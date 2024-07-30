@@ -10,20 +10,20 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, description, imageUrl, linkUrl, className }) => {
   return (
-    <div className={` rounded-xl overflow-hidden shadow-lg ${className}`}>
+    <div className={` rounded-xl flex flex-col items-end overflow-hidden shadow-lg ${className}`}>
       <img
-        className="w-full"
+        className="w-full max-h-56 "
         src={imageUrl}
         alt={title}
       />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base">{description}</p>
+        <p className="text-gray-700 text-md ">{description}</p>
       </div>
-      <div className="px-6 pt-4 pb-2">
+      <div className="p-2">
         <a
           href={linkUrl}
-          className="inline-block bg-blue-500 text-white rounded-full px-3 py-1 text-sm font-semibold"
+          className="inline-flex bg-indigo-600 px-3 text-white rounded-full p-1 text-xs font-semibold"
         >
           Learn More
         </a>

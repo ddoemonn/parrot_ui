@@ -21,13 +21,16 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
   const transformClasses = ` translate-x-[-${currentIndex * 100}%]`;
 
   return (
-    <div className="relative overflow-hidden flex items-center bg-white">
-      <div className="bg-inherit z-10 p-2 h-64 flex flex-col justify-center">
+    <div className="relative overflow-hidden flex items-center  bg-white">
+      <div className="bg-inherit absolute left-0 z-10 p-2 h-64 flex flex-col justify-center">
         <button
           onClick={handlePrev}
-          className="bg-gray-800 text-white p-2 rounded-full focus:outline-none"
+          className="border-[1px] border-slate-400 hover:bg-slate-100 p-2 rounded-full focus:outline-none"
         >
-          <ArrowLeftIcon />
+          <ArrowLeftIcon
+            width={16}
+            height={16}
+          />
         </button>
       </div>
 
@@ -35,19 +38,22 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
         {children.map((child, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-full h-64 rounded-xl  overflow-hidden"
+            className="flex-shrink-0 flex justify-center w-full h-64 rounded-xl  overflow-hidden"
           >
             {child}
           </div>
         ))}
       </div>
 
-      <div className="bg-inherit z-10 p-2 h-64 flex flex-col justify-center">
+      <div className="bg-inherit absolute right-0 z-10 p-2 h-64 flex flex-col justify-center">
         <button
           onClick={handleNext}
-          className="bg-gray-800 text-white p-2 rounded-full focus:outline-none"
+          className="border-[1px] border-slate-400  hover:bg-slate-100 p-2 rounded-full focus:outline-none"
         >
-          <ArrowRightIcon />
+          <ArrowRightIcon
+            width={16}
+            height={16}
+          />
         </button>
       </div>
     </div>

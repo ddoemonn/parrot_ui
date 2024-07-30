@@ -52,9 +52,9 @@ export default function CardPage() {
       code={cardCode}
       component={
         <Card
-          title="Sample Card"
-          description="This is a description of the sample card. It gives more details about the content."
-          imageUrl="https://via.placeholder.com/400"
+          title="Petra, Jordan"
+          description="Explore the ancient city of Petra, Jordan, renowned for its stunning rock-cut architecture and rich historical significance."
+          imageUrl="https://images.freeimages.com/images/large-previews/3cb/the-treasure-1203251.jpg"
           linkUrl="#"
           className="w-56"
         />

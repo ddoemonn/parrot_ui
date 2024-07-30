@@ -81,12 +81,12 @@ export default function CarouselPage() {
       usage={carouselUsage}
       code={carouselCode}
       component={
-        <div className="w-full max-w-2xl mx-auto">
+        <div className="w-full max-w-sm mx-auto">
           <Carousel>
-            <div className="w-full flex-shrink-0 bg-blue-500 h-64   flex items-center justify-center text-white text-2xl rounded-full ">Slide 1</div>
-            <div className="w-full flex-shrink-0 bg-red-500 h-64 flex items-center justify-center text-white text-2xl rounded-full">Slide 2</div>
-            <div className="w-full flex-shrink-0 bg-green-500 h-64 flex items-center justify-center text-white text-2xl rounded-full">Slide 3</div>
-            <div className="w-full flex-shrink-0 bg-yellow-500 h-64 flex items-center justify-center text-white text-2xl rounded-full ">Slide 4</div>
+            <div className="w-64 rounded-xl flex-shrink-0 bg-blue-500 h-64   flex items-center justify-center text-white text-2xl ">Slide 1</div>
+            <div className="w-64 rounded-xl flex-shrink-0 bg-red-500 h-64 flex items-center justify-center text-white text-2xl">Slide 2</div>
+            <div className="w-64 rounded-xl flex-shrink-0 bg-green-500 h-64 flex items-center justify-center text-white text-2xl">Slide 3</div>
+            <div className="w-64 rounded-xl flex-shrink-0 bg-yellow-400 h-64 flex items-center justify-center text-white text-2xl  ">Slide 4</div>
           </Carousel>
         </div>
       }
