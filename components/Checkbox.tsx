@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 interface CheckboxProps {
-  label: string;
+  children: React.ReactNode;
   checked?: boolean;
   onChange?: (checked: boolean) => void;
   className?: string;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ label, checked = false, onChange, className = '' }) => {
+const Checkbox: React.FC<CheckboxProps> = ({ children, checked = false, onChange, className = '' }) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   const handleChange = () => {
@@ -26,7 +26,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ label, checked = false, onChange, c
         onChange={handleChange}
         className="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out"
       />
-      <span className={`text-sm ${isChecked ? 'text-blue-600' : 'text-gray-900'}`}>{label}</span>
+      <span className={`text-sm ${isChecked ? 'text-blue-600' : 'text-gray-900'}`}>{children}</span>
     </label>
   );
 };

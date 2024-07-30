@@ -56,10 +56,11 @@ export default function CheckboxPage() {
       component={
         <div className="p-4">
           <Checkbox
-            label="Accept Terms and Conditions"
             onChange={handleCheckboxChange}
             className="mb-4"
-          />
+          >
+            Accept Terms and Conditions
+          </Checkbox>
         </div>
       }
       name="Checkbox"
