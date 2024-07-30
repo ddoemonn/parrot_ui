@@ -44,8 +44,14 @@ export default function CollapsePage() {
       code={collapseCode}
       component={
         <div className="p-4 space-y-4">
-          <Collapse title="Section 1">
-            <p>This is the content for section 1.</p>
+          <Collapse
+            title="Introduction to Quantum Computing"
+            buttonClassName="text-white bg-indigo-500"
+          >
+            <p>
+              Quantum computing harnesses the unique behavior of quantum physics, such as superposition and entanglement, to perform computations in ways that
+              classical computers cannot. This field holds the potential to revolutionize industries by solving complex problems at unprecedented speeds.
+            </p>
           </Collapse>
         </div>
       }
