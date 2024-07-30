@@ -18,7 +18,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
       console.log(currentPath, items);
       setActiveTab(currentPath);
     }
-  }, []);
+  }, [items]);
   return (
     <nav
       aria-label="breadcrumb"
@@ -33,7 +33,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
             {item.href ? (
               <a
                 href={item.href}
-                className={`${activeTab === item.href ? 'text-indigo-500' : ''}`}
+                className={`${activeTab === item.href ? 'text-indigo-500 hover:underline cursor-pointer' : 'hover:underline cursor-pointer'}`}
               >
                 {item.label}
               </a>

@@ -65,7 +65,7 @@ export default function BadgePage() {
       usage={breadcrumbUsage}
       code={breadcrumbCode}
       component={
-        <div className="container mx-auto p-4">
+        <div className="text-lg p-4">
           <Breadcrumb items={breadcrumbItems} />
         </div>
       }
