@@ -1,19 +1,24 @@
 import React from 'react';
 
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+
 import CopyButton from './CopyButton';
 
 interface CodeProps {
   code: string;
   copyButton?: boolean;
-  className?: string;
 }
-
-const Code: React.FC<CodeProps> = ({ code, copyButton, className }) => {
+const Code: React.FC<CodeProps> = ({ code, copyButton }) => {
   return (
-    <div className="relative  z-0 flex">
-      <pre className={`relative ${className} flex-1 p-4 rounded-md max-w-full max-h-96 lg:max-w-3xl overflow-auto`}>
-        <code className="inline-block  text-wrap">{code}</code>
-      </pre>
+    <div className="relative  z-0 flex overflow-scroll w-full">
+      <SyntaxHighlighter
+        customStyle={{ width: '45rem', maxHeight: '30rem', borderRadius: '0.5rem' }}
+        language="tsx"
+        //PreTag={pre}
+      >
+        {code}
+      </SyntaxHighlighter>
+
       {copyButton && (
         <div className="m-2">
           <CopyButton text={code} />

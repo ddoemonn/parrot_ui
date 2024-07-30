@@ -1,3 +1,7 @@
+import { useState } from 'react';
+
+import { set } from 'date-fns';
+
 import ColorPicker from '@/components/ColorPicker';
 import ComponentDetail from '@/components/websiteComponents/ComponentDetail';
 
@@ -52,17 +56,15 @@ const colorPickerUsage = `export default function ColorPickerPage() {
 `;
 
 export default function ColorPickerPage() {
-  const handleColorChange = (color: string) => {
-    console.log('Selected Color:', color);
-  };
+  const [currentColor, setCurrentColor] = useState<string>('bg-blue-400');
   return (
     <ComponentDetail
       usage={colorPickerUsage}
       code={colorPickerCode}
       component={
         <ColorPicker
-          initialColor="#ff0000"
-          onColorChange={handleColorChange}
+          currentColor={currentColor}
+          setCurrentColor={setCurrentColor}
         />
       }
       name="Color Picker"

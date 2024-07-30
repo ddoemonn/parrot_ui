@@ -16,7 +16,7 @@ export default function ComponentDetail({ usage, code, component, detail, name }
   const tabs = [
     {
       label: 'Preview',
-      content: <div className="mt-10 flex justify-center items-center">{component}</div>,
+      content: <div className="mt-10 w-full flex justify-center items-center">{component}</div>,
     },
     {
       label: 'Code',
@@ -24,7 +24,6 @@ export default function ComponentDetail({ usage, code, component, detail, name }
         <Code
           code={code}
           copyButton={true}
-          className="bg-indigo-50 text-indigo-900"
         />
       ),
     },
@@ -35,7 +34,6 @@ export default function ComponentDetail({ usage, code, component, detail, name }
           <Code
             code={usage}
             copyButton={true}
-            className="bg-blue-50 text-blue-900"
           />
         </ScrollArea>
       ),
