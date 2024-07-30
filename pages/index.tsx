@@ -159,15 +159,15 @@ export default function Home() {
           className="absolute overflow-hidden w-full max-h-svh opacity-20 z-0"
         />
 
-        <div className=" text-center flex flex-col items-center mt-40 px-6 py-12 max-w-3xl mx-auto">
+        <div className="text-center flex flex-col items-center mt-40 px-6 py-12 max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 z-10">
-            Welcome to <span className=" bg-gradient-to-r from-indigo-400 via-green-500 to-yellow-500 text-transparent bg-clip-text">ParrotUI 🦜</span>
+            Welcome to <span className="bg-gradient-to-r from-indigo-400 via-green-500 to-yellow-500 text-transparent bg-clip-text">ParrotUI 🦜</span>
           </h1>
           <p className="text-2xl text-gray-800 z-10">
             ParrotUI makes UI development a breeze! With our <span className="text-blue-500 font-semibold">no CLI</span> approach, you can{' '}
-            <span className="text-green-500 font-semibold">copy and paste components</span> directly into your project. We don’t use third-party libraries, only
-            Tailwind and TSX. This means components are <span className="text-indigo-500 font-semibold">easy to understand</span> and integrate. Get started
-            quickly with ParrotUI’s simple and intuitive design!
+            <span className="text-green-500 font-semibold">copy and paste components</span> directly into your project. We use Tailwind and TSX, ensuring
+            components are <span className="text-indigo-500 font-semibold">easy to understand</span> and integrate. Get started quickly with ParrotUI’s simple
+            and intuitive design!
           </p>
         </div>
       </>
