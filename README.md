@@ -2,9 +2,6 @@
 
 ![](https://github.com/user-attachments/assets/fffa457d-7149-4e12-bf39-8250a743e7f1)
 
-
-ParrotUI makes UI development a breeze! With our no-CLI approach, you can copy and paste components directly into your project. We use Tailwind and TSX, ensuring components are easy to understand and integrate.
-
 ## 🎯 Project Aim
 
 ParrotUI aims to simplify UI development by providing a library of easy-to-use, copy-paste components. Our main philosophy is that users should understand their UI components deeply. We achieve this by:
