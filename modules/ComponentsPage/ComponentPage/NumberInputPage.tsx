@@ -90,7 +90,7 @@ export default function NumberInputPage() {
       usage={numberInputUsage}
       code={numberInputCode}
       component={
-        <div className="p-4">
+        <div className="w-full flex flex-col items-center">
           <NumberInput
             value={value}
             onChange={handleValueChange}
@@ -98,6 +98,7 @@ export default function NumberInputPage() {
             max={100}
             step={5}
             placeholder="Enter number"
+            className="w-1/3"
           />
           <p className="mt-4">Current Value: {value}</p>
         </div>

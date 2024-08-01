@@ -62,10 +62,7 @@ export default function TooltipPage() {
       component={
         <div className="p-10">
           <Tooltip text="This is a tooltip!">
-            <Button
-              label="Hover me"
-              variant="secondary"
-            />
+            <Button className="bg-yellow-300 text-indigo-700 shadow-xl">Hover me</Button>
           </Tooltip>
         </div>
       }

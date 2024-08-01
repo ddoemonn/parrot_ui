@@ -1,6 +1,8 @@
 // src/components/Timeline.tsx
 import React from 'react';
 
+import { InfoCircledIcon } from '@radix-ui/react-icons';
+
 type TimelineItem = {
   date: string;
   content: string;
@@ -19,22 +21,11 @@ const Timeline: React.FC<TimelineProps> = ({ items }) => {
           className="mb-10 ml-6"
         >
           <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white">
-            <svg
-              className="w-3 h-3 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 00-2 0v2a1 1 0 002 0V7zm0 4a1 1 0 00-2 0v2a1 1 0 002 0v-2z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <InfoCircledIcon className="w-4 h-4 text-blue-500" />
           </span>
           <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm ">
             <time className="mb-2 text-sm font-normal text-gray-400 ">{item.date}</time>
-            <p className="text-sm font-normal text-gray-500 ">{item.content}</p>
+            <p className="text-sm font-normal text-gray-700 ">{item.content}</p>
           </div>
         </div>
       ))}

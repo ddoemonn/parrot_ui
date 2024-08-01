@@ -1,5 +1,9 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 
+import { ArrowBottomRightIcon } from '@radix-ui/react-icons';
+
+import Button from './Button';
+
 interface ResizableProps {
   initialWidth?: number;
   initialHeight?: number;
@@ -12,7 +16,7 @@ const Resizable: React.FC<ResizableProps> = ({ initialWidth = 200, initialHeight
   const startPosition = useRef<{ x: number; y: number } | null>(null);
 
   // Event handler to start resizing
-  const startResizing = (e: React.MouseEvent<HTMLDivElement>) => {
+  const startResizing = (e: React.MouseEvent<HTMLButtonElement>) => {
     setIsResizing(true);
     startPosition.current = { x: e.clientX, y: e.clientY };
     e.preventDefault();
@@ -59,17 +63,15 @@ const Resizable: React.FC<ResizableProps> = ({ initialWidth = 200, initialHeight
   return (
     <div
       ref={containerRef}
-      className="relative bg-gray-200 border border-gray-400 overflow-hidden"
+      className="relative bg-slate-50 border border-gray-200 overflow-hidden"
       style={{ width: size.width, height: size.height }}
     >
       <div className="p-4">
-        {/* Content goes here */}
         <p>Resize me!</p>
       </div>
-      <div
-        className="absolute bottom-0 right-0 w-8 h-8 bg-gray-600 cursor-se-resize"
-        onMouseDown={startResizing}
-      />
+      <Button onMouseDown={startResizing}>
+        <ArrowBottomRightIcon className="absolute bottom-0 right-0 w-4 h-4  cursor-se-resize" />
+      </Button>
     </div>
   );
 };

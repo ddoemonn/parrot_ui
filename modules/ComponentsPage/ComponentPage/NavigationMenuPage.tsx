@@ -107,23 +107,21 @@ export default function NavMenuPage() {
       href: '/',
       renderItem: (
         <div className="flex items-center">
-          <p className="ml-2 font-semibold text-2xl mt-1 bg-gradient-to-r from-indigo-400 via-green-500 to-yellow-500 text-transparent bg-clip-text">
-            ParrotUI 🦜
-          </p>
+          <p className="ml-2 font-semibold text-2xl mt-1 text-indigo-500">Home</p>
         </div>
       ),
     },
     {
       href: '/examples',
-      renderItem: <span className="text-blue-500 hover:underline text-lg font-semibold">Examples</span>,
+      renderItem: <span className=" hover:underline text-lg font-semibold text-yellow-400">Examples</span>,
     },
     {
       href: '/components/accordion',
-      renderItem: <span className="text-green-500 hover:underline text-lg font-semibold">Components</span>,
+      renderItem: <span className="hover:underline text-lg font-semibold  text-blue-500">Components</span>,
     },
     {
       href: '/resources',
-      renderItem: <span className="text-indigo-500 hover:underline text-lg font-semibold">Resources</span>,
+      renderItem: <span className="hover:underline text-lg font-semibold text-green-500">Resources</span>,
     },
   ];
 
@@ -132,7 +130,7 @@ export default function NavMenuPage() {
       usage={navMenuUsage}
       code={navMenuCode}
       component={
-        <div>
+        <div className="w-full">
           <NavMenu items={navItems} />
         </div>
       }

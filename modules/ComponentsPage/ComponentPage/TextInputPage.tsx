@@ -62,17 +62,10 @@ export default function InputPage() {
 
 export default function InputPage() {
   const [value, setValue] = useState('');
-  const [error, setError] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = event.target.value;
     setValue(newValue);
-
-    if (newValue.length < 3) {
-      setError('Input must be at least 3 characters long.');
-    } else {
-      setError('');
-    }
   };
 
   return (
@@ -85,7 +78,6 @@ export default function InputPage() {
             label="Your Name"
             value={value}
             onChange={handleChange}
-            errorMessage={error}
             placeholder="Enter your name"
           />
         </div>
