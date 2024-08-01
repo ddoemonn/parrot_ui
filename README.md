@@ -84,6 +84,15 @@ We welcome contributions to ParrotUI! Here's how you can help:
 4. Add or update documentation as necessary.
 5. Submit a pull request with a clear description of your changes.
 
+To start the project first copy the code then run the following commands in your terminal:
+
+```bash
+  bun install
+```
+```bash
+  bun run dev
+```
+
 Please ensure your contributions align with our project philosophy:
 - Keep components simple and easy to understand
 - Minimize third-party dependencies
