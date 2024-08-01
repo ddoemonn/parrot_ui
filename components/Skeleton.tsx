@@ -12,12 +12,7 @@ const Skeleton: React.FC<SkeletonProps> = ({ type = 'text', width = '100%', heig
   const baseClasses = 'bg-gray-300 animate-pulse';
   const shapeClasses = type === 'avatar' ? `w-${width} h-${height} rounded-full` : `w-${width} h-${height} rounded-${borderRadius}`;
 
-  return (
-    <div
-      className={`${baseClasses} ${shapeClasses} ${className}`}
-      style={{ width, height, borderRadius }}
-    />
-  );
+  return <div className={`${baseClasses} ${shapeClasses} ${className}`} />;
 };
 
 export default Skeleton;

@@ -26,7 +26,7 @@ const Slider: React.FC<SliderProps> = ({ min, max, step = 1, initialValue = min,
         step={step}
         value={value}
         onChange={handleChange}
-        className=" w-full h-2 bg-gray-200 accent-black rounded-lg appearance-none cursor-pointer "
+        className=" w-full h-2 bg-indigo-100 accent-indigo-500 active:accent-indigo-800 hover:accent-indigo-800 rounded-lg appearance-none cursor-pointer "
       />
       <div className="mt-4 flex justify-between w-full text-sm text-gray-600">
         <span>{value}</span>

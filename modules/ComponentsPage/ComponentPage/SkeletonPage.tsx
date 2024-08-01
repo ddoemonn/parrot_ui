@@ -80,24 +80,14 @@ export default function SkeletonPage() {
             <div className="flex items-center space-x-4">
               <Skeleton
                 type="avatar"
-                width="3rem"
-                height="3rem"
+                className="w-[3rem] h-[3rem]"
               />
               <div className="space-y-2">
-                <Skeleton
-                  width="150px"
-                  height="1rem"
-                />
-                <Skeleton
-                  width="100px"
-                  height="0.75rem"
-                />
+                <Skeleton className="w-[150px] h-[1rem]" />
+                <Skeleton className="w-[100px] h-[0.75rem]" />
               </div>
             </div>
-            <Skeleton
-              width="100%"
-              height="1rem"
-            />
+            <Skeleton className="w-full h-[1rem]" />
           </div>
         </div>
       }
