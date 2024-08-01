@@ -1,40 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ParrotUI 🦜
 
-## Getting Started
+![](https://github.com/user-attachments/assets/fffa457d-7149-4e12-bf39-8250a743e7f1)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+ParrotUI makes UI development a breeze! With our no-CLI approach, you can copy and paste components directly into your project. We use Tailwind and TSX, ensuring components are easy to understand and integrate.
+
+## 🎯 Project Aim
+
+ParrotUI aims to simplify UI development by providing a library of easy-to-use, copy-paste components. Our main philosophy is that users should understand their UI components deeply. We achieve this by:
+
+1. Offering a no-CLI approach for quick integration
+2. Using Tailwind CSS for intuitive styling
+3. Providing components in TSX for TypeScript users
+4. Minimizing third-party library dependencies
+
+## ✨ Features
+
+- **No-CLI Approach**: Simply copy and paste components into your project
+- **Tailwind CSS**: Utilize the power of Tailwind for responsive and customizable designs
+- **TSX Components**: TypeScript support out of the box
+- **Minimal Dependencies**: Optimized to use fewer third-party libraries
+- **Easy to Understand**: Clean, well-documented code for each component
+- **Customizable**: Easily modify components to fit your specific needs
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- A React project set up with TypeScript
+- Tailwind CSS installed in your project
+
+### Installation
+
+1. There's no installation required!
+2. Browse through our collection of components.
+3. When you find a component you like, simply copy the code.
+4. Paste the component directly into your project.
+
+## 📖 Usage
+
+1. Navigate to the ParrotUI component library.
+2. Select the component you want to use.
+3. Copy the component code.
+4. Paste it into your React TSX file.
+5. Customize the component as needed using Tailwind classes or by modifying the TSX.
+
+Example:
+
+```tsx
+import { ButtonHTMLAttributes } from 'react';
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+  disabled?: boolean;
+  className?: string;
+  id?: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ children, disabled = false, className, id, ...props }) => {
+  const baseClasses = 'px-4 py-2 rounded-lg focus:outline-none transition-colors duration-300';
+
+  const disabledStyless = disabled && 'opacity-40 bg-gray-200 cursor-not-allowed';
+
+  return (
+    <button
+      {...props}
+      className={`${baseClasses} ${disabledStyless} ${className}`}
+      disabled={disabled}
+      id={id}
+    >
+      {children}
+    </button>
+  );
+};
+
+export default Button;
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🤝 Contributing
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+We welcome contributions to ParrotUI! Here's how you can help:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Write your code, ensuring it follows our coding standards and philosophy.
+4. Add or update documentation as necessary.
+5. Submit a pull request with a clear description of your changes.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Please ensure your contributions align with our project philosophy:
+- Keep components simple and easy to understand
+- Minimize third-party dependencies
+- Use Tailwind CSS for styling
+- Provide clear documentation and usage examples
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📄 License
 
-## Learn More
+ParrotUI is released under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Get started quickly with ParrotUI's simple and intuitive design! If you have any questions or need support, please [open an issue](https://github.com/ddoemonn/parrot_ui/issues) on our GitHub repository.
