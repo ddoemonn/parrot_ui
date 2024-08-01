@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import CopyButton from './CopyButton';
 
@@ -12,9 +13,9 @@ const Code: React.FC<CodeProps> = ({ code, copyButton }) => {
   return (
     <div className="relative  z-0 flex overflow-scroll w-full">
       <SyntaxHighlighter
-        customStyle={{ width: '45rem', maxHeight: '30rem', borderRadius: '0.5rem' }}
+        customStyle={{ width: '45rem', maxHeight: '30rem', borderRadius: '0.5rem', fontSize: '0.9rem' }}
         language="tsx"
-        //PreTag={pre}
+        style={oneLight}
       >
         {code}
       </SyntaxHighlighter>

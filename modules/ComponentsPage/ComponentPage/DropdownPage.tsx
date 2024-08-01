@@ -79,6 +79,7 @@ export default function DropdownPage() {
             items={['Option 1', 'Option 2', 'Option 3']}
             onSelect={handleSelect}
             label="Select an option"
+            buttonStyle="bg-blue-500 text-white"
           />
         </div>
       }

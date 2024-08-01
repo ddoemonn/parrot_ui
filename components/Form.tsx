@@ -32,12 +32,12 @@ const DynamicForm: React.FC<FormProps> = ({ fields, onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-4"
+      className="space-y-4 flex flex-col items-end justify-end"
     >
       {fields.map(field => (
         <div
           key={field.id}
-          className="flex flex-col"
+          className="flex flex-col w-full"
         >
           <label
             htmlFor={field.id}
@@ -50,7 +50,7 @@ const DynamicForm: React.FC<FormProps> = ({ fields, onSubmit }) => {
               id={field.id}
               name={field.id}
               onChange={handleChange}
-              className="border border-gray-300 rounded-md p-2"
+              className="border  border-gray-300 rounded-md p-2"
             >
               {field.options?.map(option => (
                 <option
@@ -75,7 +75,7 @@ const DynamicForm: React.FC<FormProps> = ({ fields, onSubmit }) => {
       ))}
       <button
         type="submit"
-        className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+        className=" bg-indigo-600  text-white text-sm text-center py-2 px-4 rounded-md hover:bg-indigo-500"
       >
         Submit
       </button>

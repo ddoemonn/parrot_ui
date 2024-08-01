@@ -24,8 +24,8 @@
 
 * {
   --sb-track-color: transparent;
-  --sb-thumb-color: #c7d2fe;
-  --sb-size: 5px;
+  --sb-thumb-color: #d4d4d4;
+  --sb-size: 12px;
 }
 
 *::-webkit-scrollbar {
@@ -40,8 +40,9 @@
 
 *::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
-  border-radius: 3px;
-  background-clip: padding-box;
+  background-clip: padding-box; 
+  border: 4px solid transparent; 
+  border-radius: 8px;
 }
 
 @supports not selector(::-webkit-scrollbar) {

@@ -135,7 +135,7 @@ export default function FormPage() {
       usage={formUsage}
       code={formCode}
       component={
-        <div className=" max-w-md mx-auto">
+        <div className=" max-w-md mx-auto p-5 shadow-xl rounded-xl">
           <Form
             fields={fields}
             onSubmit={handleFormSubmit}

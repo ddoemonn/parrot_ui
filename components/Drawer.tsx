@@ -5,25 +5,33 @@ interface DrawerProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  direction?: 'left' | 'right'; // Add direction prop
 }
 
-const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, children }) => {
+const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, children, direction = 'right' }) => {
+  const drawerPosition = direction === 'right' ? 'right-0' : 'left-0';
+  const drawerTranslate = direction === 'right' ? 'translate-x-full' : '-translate-x-full';
+
   return (
-    <div className={`fixed inset-y-0 right-0 z-50 transition-width duration-300 ${isOpen ? 'w-80' : 'w-0'}`}>
+    <>
       <div
-        className={`fixed inset-0  opacity-50 transition-opacity duration-300 ${isOpen ? 'opacity-50 bg-black' : 'opacity-0 pointer-events-none'}`}
+        className={`fixed z-50 overflow-auto max-h-screen inset-0 bg-black transition-opacity duration-300 ${isOpen ? 'opacity-50' : 'opacity-0 pointer-events-none'}`}
         onClick={onClose}
       />
-      <div className={`relative h-full bg-white shadow-xl p-4 overflow-hidden transition-all duration-300 ${isOpen ? 'w-80' : 'w-0'}`}>
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4"
+      <div className={`fixed m-1 p-2 rounded-lg inset-y-0 ${drawerPosition} z-50 ${isOpen ? 'translate-x-0' : drawerTranslate} overflow-auto max-h-screen`}>
+        <div
+          className={`relative rounded-lg h-full bg-white shadow-xl min-w-96 overflow-auto max-h-screen p-8 pt-0 transition-transform duration-300 ${isOpen ? 'w-80' : 'w-0'}`}
         >
-          X
-        </button>
-        <div className={`mt-8 ${isOpen ? 'block' : 'hidden'}`}>{children}</div>
+          <button
+            onClick={onClose}
+            className="absolute top-5 right-4"
+          >
+            X
+          </button>
+          <div className="mt-5 ">{children}</div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

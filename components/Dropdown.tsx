@@ -6,9 +6,10 @@ interface DropdownProps {
   items: string[];
   onSelect: (item: string) => void;
   label: string;
+  buttonStyle?: string;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ items, onSelect, label }) => {
+const Dropdown: React.FC<DropdownProps> = ({ items, onSelect, label, buttonStyle }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -24,9 +25,10 @@ const Dropdown: React.FC<DropdownProps> = ({ items, onSelect, label }) => {
     <div className="relative inline-block text-left">
       <Button
         onClick={toggleDropdown}
-        variant="secondary"
-        label={label}
-      />
+        className={buttonStyle}
+      >
+        {label}
+      </Button>
       {isOpen && (
         <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">

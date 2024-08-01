@@ -36,13 +36,13 @@ const DatePicker: React.FC<DatePickerProps> = ({ selectedDate, onDateChange }) =
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="px-4 py-2 border rounded-lg focus:outline-none"
+        className="px-2 py-1 border rounded-lg focus:outline-none"
       >
         {selectedDate ? selectedDate.format('MMM DD, YYYY') : 'Select a date'}
       </button>
 
       {isOpen && (
-        <div className="absolute mt-2 p-4 border rounded-lg bg-white shadow-lg">
+        <div className="absolute mt-1 p-3 border rounded-lg bg-white shadow-lg">
           <div className="flex items-center justify-between mb-2">
             <button
               onClick={() => setCurrentDate(currentDate.subtract(1, 'month'))}
@@ -74,7 +74,7 @@ const DatePicker: React.FC<DatePickerProps> = ({ selectedDate, onDateChange }) =
                 <button
                   key={day.format('DD')}
                   onClick={() => handleDateClick(day)}
-                  className={`py-2 px-4 rounded-lg ${isSelected ? 'bg-blue-500 text-white' : 'text-black hover:bg-blue-200'}`}
+                  className={`p-1 rounded-lg ${isSelected ? 'bg-blue-500 text-white' : 'text-black hover:bg-blue-200'}`}
                 >
                   {day.format('D')}
                 </button>

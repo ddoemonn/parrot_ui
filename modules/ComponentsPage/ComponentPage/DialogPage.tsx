@@ -72,9 +72,9 @@ export default function DialogPage() {
           <Dialog
             isOpen={isDialogOpen}
             onClose={closeDialog}
-            title="My Dialog"
+            title="Update"
           >
-            <p>This is a sample dialog content. You can put any content here.</p>
+            <p>We've updated our privacy policy. Please review it to understand the changes.</p>
           </Dialog>
         </div>
       }

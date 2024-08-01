@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 
 import Drawer from '@/components/Drawer';
+import Form from '@/components/Form';
+import ScrollArea from '@/components/ScrollArea';
 import ComponentDetail from '@/components/websiteComponents/ComponentDetail';
 
 const drawerCode = `import React from 'react';
@@ -58,6 +60,29 @@ export default function DrawerPage() {
     setIsDrawerOpen(!isDrawerOpen);
   };
 
+  const handleFormSubmit = (data: Record<string, string>) => {
+    console.log('Form data submitted:', data);
+  };
+
+  const fields = [
+    { id: 'name', label: 'Full Name', type: 'text', placeholder: 'Enter your full name' },
+    { id: 'email', label: 'Email Address', type: 'email', placeholder: 'Enter your email address' },
+    { id: 'age', label: 'Age', type: 'number', placeholder: 'Enter your age' },
+    {
+      id: 'gender',
+      label: 'Gender',
+      type: 'select',
+      options: ['Male', 'Female', 'Other'],
+    },
+    { id: 'address', label: 'Street Address', type: 'text', placeholder: 'Enter your street address' },
+    { id: 'city', label: 'City', type: 'text', placeholder: 'Enter your city' },
+    { id: 'state', label: 'State/Province', type: 'text', placeholder: 'Enter your state or province' },
+    { id: 'zip', label: 'ZIP/Postal Code', type: 'text', placeholder: 'Enter your ZIP or postal code' },
+    { id: 'country', label: 'Country', type: 'text', placeholder: 'Enter your country' },
+    { id: 'phone', label: 'Phone Number', type: 'tel', placeholder: 'Enter your phone number' },
+    { id: 'notes', label: 'Additional Notes', type: 'textarea', placeholder: 'Enter any additional notes or comments' },
+  ];
+
   return (
     <ComponentDetail
       usage={drawerUsage}
@@ -70,11 +95,17 @@ export default function DrawerPage() {
           >
             Toggle Drawer
           </button>
+
           <Drawer
             isOpen={isDrawerOpen}
             onClose={toggleDrawer}
+            direction="right"
           >
-            <p>hey</p>
+            <h1 className="text-xl mb-4">User Information Form</h1>
+            <Form
+              fields={fields}
+              onSubmit={handleFormSubmit}
+            />
           </Drawer>
         </div>
       }
