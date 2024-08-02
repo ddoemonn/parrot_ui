@@ -4,12 +4,7 @@
 
 ## 🎯 Project Aim
 
-ParrotUI aims to simplify UI development by providing a library of easy-to-use, copy-paste components. Our main philosophy is that users should understand their UI components deeply. We achieve this by:
-
-1. Offering a no-CLI approach for quick integration
-2. Using Tailwind CSS for intuitive styling
-3. Providing components in TSX for TypeScript users
-4. Minimizing third-party library dependencies
+ParrotUI aims to simplify UI development by providing a library of easy-to-use, copy-paste components. Our main philosophy is that users should understand their UI components deeply.
 
 ## ✨ Features
 
