@@ -41,7 +41,7 @@ export default function ComponentDetail({ usage, code, component, detail, name }
   ];
 
   return (
-    <div className="p-10 pt-7 w-4/5">
+    <div className="p-10 pt-7 w-4/5 overflow-scroll">
       <Breadcrumb items={[{ label: 'Components' }, { label: name, href: `/components/${name.toLowerCase().replace(' ', '-')}` }]} />
       <h1 className="text-3xl font-semibold mt-5 mb-2 text-indigo-500">{name}</h1>
 
