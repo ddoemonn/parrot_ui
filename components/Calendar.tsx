@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { cn } from '@/lib/utils';
+
 const generateDays = (year: number, month: number) => {
   const date = new Date(year, month, 1);
   const days: Date[] = [];
@@ -69,7 +71,9 @@ const Calendar: React.FC = () => {
         {days.map(day => (
           <div
             key={day.toString()}
-            className={`p-2 hover:bg-gray-100 rounded-xl cursor-pointer ${selectedDate && isSameDate(day, selectedDate) ? 'bg-black text-white hover:bg-black' : ''}`}
+            className={cn('p-2 hover:bg-gray-100 rounded-xl cursor-pointer', {
+              'bg-black text-white hover:bg-black': selectedDate && isSameDate(day, selectedDate),
+            })}
             onClick={() => handleDateClick(day)}
           >
             {day.getDate()}
