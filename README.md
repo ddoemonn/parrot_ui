@@ -101,3 +101,6 @@ ParrotUI is released under the MIT License. See the [LICENSE](LICENSE) file for 
 ---
 
 Get started quickly with ParrotUI's simple and intuitive design! If you have any questions or need support, please [open an issue](https://github.com/ddoemonn/parrot_ui/issues) on our GitHub repository.
+
+<a href="https://www.buymeacoffee.com/ozergklp" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
