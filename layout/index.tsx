@@ -1,8 +1,9 @@
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import { Exo } from 'next/font/google';
 
-const exo = Exo({ subsets: ['latin'] });
 import NavigationMenu from '@/components/NavigationMenu';
+
+const exo = Exo({ subsets: ['latin'] });
 
 const navItems = [
   {
@@ -28,7 +29,7 @@ const navItems = [
     renderItem: <span className="text-indigo-500 hover:underline text-lg font-semibold">Resources</span>,
   },
   {
-    href: 'https://www.github.com',
+    href: 'https://github.com/ddoemonn/parrot_ui',
     renderItem: <GitHubLogoIcon className="w-6 h-6" />,
   },
 ];
