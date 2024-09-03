@@ -5,22 +5,20 @@
 /* src/styles/globals.css */
 
 .keyword {
-    color: #ff79c6; /* Example color for keywords */
-  }
-  
-  .string {
-    color: #f1fa8c; /* Example color for strings */
-  }
-  
-  .comment {
-    color: #6272a4; /* Example color for comments */
-  }
-  
-  .number {
-    color: #bd93f9; /* Example color for numbers */
-  }
-  
+  color: #ff79c6; /* Example color for keywords */
+}
 
+.string {
+  color: #f1fa8c; /* Example color for strings */
+}
+
+.comment {
+  color: #6272a4; /* Example color for comments */
+}
+
+.number {
+  color: #bd93f9; /* Example color for numbers */
+}
 
 * {
   --sb-track-color: transparent;
@@ -40,30 +38,59 @@
 
 *::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
-  background-clip: padding-box; 
-  border: 4px solid transparent; 
+  background-clip: padding-box;
+  border: 4px solid transparent;
   border-radius: 8px;
 }
 
 @supports not selector(::-webkit-scrollbar) {
   * {
-      scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
 
-input[type="color"] {
-
-	border: none;
-	width: 32px;
-	height: 32px;
+input[type='color'] {
+  border: none;
+  width: 32px;
+  height: 32px;
 }
-input[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
   border: none;
   color: transparent;
 }
-input[type="color"]::-webkit-color-swatch {
-	border: none;
+input[type='color']::-webkit-color-swatch {
+  border: none;
   border-radius: 100%;
+}
+
+.fade-in {
+  @apply animate-fade;
+}
+.fade-in-left {
+  @apply animate-fade-in-left;
+}
+.fade-in-right {
+  @apply animate-fade-in-right;
+}
+.fade-in-up {
+  @apply animate-fade-in-up;
+}
+.fade-in-down {
+  @apply animate-fade-in-down;
+}
+.slide-in-left {
+  @apply animate-slide-in-left;
+}
+.slide-in-right {
+  @apply animate-slide-in-right;
+}
+.slide-in-top {
+  @apply animate-slide-in-top;
+}
+.slide-in-bottom {
+  @apply animate-slide-in-bottom;
+}
+.bounce {
+  @apply animate-bounce;
 }
