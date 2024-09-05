@@ -56,6 +56,7 @@ export const AlertDialogContent: React.FC<AlertDialogContentProps> = ({ isOpen, 
       <div
         id="alert-dialog-content"
         className="fixed text-md inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+        onClick={onClose}
       >
         <div className={`${className} relative bg-white flex flex-col items-end py-6 px-6 rounded-lg shadow-lg max-w-xl mt-0`}>
           <div className="inline-flex">
