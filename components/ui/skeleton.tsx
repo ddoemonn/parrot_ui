@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, HTMLMotionProps } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { useTheme } from '@/hooks/use-theme';
 
-export interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface SkeletonProps extends HTMLMotionProps<"div"> {
   variant?: 'default' | 'circular' | 'rounded';
   width?: string | number;
   height?: string | number;
@@ -47,10 +47,10 @@ export function Skeleton({
 
   return (
     <motion.div
-      {...(animated && animation)}
+      {...(animated ? animation : {})}
       className={cn(variants[variant], className)}
       style={baseStyles}
-      {...(props as React.HTMLAttributes<HTMLDivElement>)}
+      {...props}
     />
   );
 }

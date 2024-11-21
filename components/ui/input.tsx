@@ -6,7 +6,7 @@ import { useTheme } from '@/hooks/use-theme';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   variant?: 'default' | 'filled' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
+  inputSize?: 'sm' | 'md' | 'lg';
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   error?: string;
@@ -21,7 +21,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({
     className,
     variant = 'default',
-    size = 'md',
+    inputSize = 'md',
     leftIcon,
     rightIcon,
     error,
@@ -72,7 +72,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             className={cn(
               baseStyles,
               variants[variant],
-              sizes[size],
+              sizes[inputSize],
               error && states.error,
               success && states.success,
               leftIcon && "pl-10",
