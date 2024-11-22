@@ -117,25 +117,7 @@ export default function ManifestPage() {
         </section>
 
          {/* AI and Contributions */}
-        <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-text flex items-center gap-2">
-            <Bot className="w-6 h-6 text-[#FF6B6B]" />
-            AI-Powered & Human-Crafted
-          </h2>
-          <div className="p-6 bg-gradient-to-br from-[#FF6B6B]/10 to-[#4ECDC4]/10 rounded-lg border border-white/10">
-            <div className="prose prose-invert max-w-none">
-              <p className="text-lg leading-relaxed">
-                🤖 <span className="text-[#FF6B6B] font-semibold">Yes, we use AI!</span> And we're proud of it! ParrotUI components are crafted with the help of AI, bringing you the best of both silicon and carbon-based intelligence. Think of it as having a super-powered pair programming buddy who never needs coffee breaks!
-              </p>
-              <p className="text-lg leading-relaxed mt-4">
-                🌟 <span className="text-[#4ECDC4] font-semibold">Contributions? Bring them on!</span> Whether you're human, AI, or a particularly clever parrot, we welcome all contributions. Use AI tools, use your brain, or use both - we care about the quality and creativity of the code, not how it was written.
-              </p>
-              <p className="text-lg leading-relaxed mt-4">
-                💡 <span className="text-[#45B7D1] font-semibold">The future is collaborative!</span> We believe the best results come from combining human creativity with AI capabilities. Let's push the boundaries of what's possible in UI development together!
-              </p>
-            </div>
-          </div>
-        </section>
+        
       </motion.div>
     </div>
   );
