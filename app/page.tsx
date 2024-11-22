@@ -63,7 +63,7 @@ export default function Home() {
           </p>
           <div className="flex items-center justify-center space-x-4">
             <Link 
-              href="/components"
+              href="/components/button"
               className="px-8 py-3 bg-gradient-to-r from-[#FF6B6B] to-[#FF8E53] rounded-full font-semibold hover:shadow-lg hover:shadow-[#FF6B6B]/20 transition-all duration-300 flex items-center group"
             >
               Get Started
