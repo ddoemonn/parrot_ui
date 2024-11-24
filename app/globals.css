@@ -22,26 +22,26 @@ body {
   color: var(--text);
 }
 
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
+/* Ensure content is still scrollable */
+html, body {
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+/* Add smooth scrolling for a better user experience */
+html {
+  scroll-behavior: smooth;
 }
 
 
